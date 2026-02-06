@@ -1,0 +1,57 @@
+{
+  
+  "activationEvents": [
+    "onLanguage:SMG",
+    "onDebug:smg" 
+   ],
+  "name": "smg-syntax-highlighting",
+  "displayName": "SMG Syntax Highlighting",
+  "description": "SMG is a programming language, downloadable in the github account mangykirb, repo named \"SMG-language\". SMG is as fast as native assembly due to the method of translating SMG into assembly, and nasm is used to make obj files that need to be linked (or not) by GCC, ld.exe or other.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grzegorzchwal80-glitch/SMG-language"
+  },
+  "engines": {
+    "vscode": "^1.108.1"
+  },
+  "license": "GPL-3.0-or-later",
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "SMG",
+        "aliases": ["SMG"],
+        "extensions": [".smg", ".smg4"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "SMG",
+        "scopeName": "source.smg",
+        "path": "./syntaxes/SMG.tmLanguage.json"
+      }
+    ],
+    "debuggers": [
+      {
+        "type": "smg",
+        "label": "SMG Debugger",
+        "program": "./out/debugAdapter.js",
+        "languages": ["SMG"],
+        "initialConfigurations": [
+          {
+            "type": "smg",
+            "request": "launch",
+            "name": "Launch SMG Program",
+            "program": "${file}"
+          }
+        ]
+      }
+    ]
+  },
+  "publisher": "mangykirb",
+  "main": "./extension.js"
+}
