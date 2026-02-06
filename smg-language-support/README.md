@@ -1,4 +1,4 @@
-# smg-syntax-highlighting README
+# smg-language-support README
 
 Hi!
 This is a syntax highligher + intellisense extention i made for my programming language SMG, cool eh?
