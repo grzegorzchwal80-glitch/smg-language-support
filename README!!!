@@ -1,0 +1,8 @@
+hi!
+note, that when u install the vsix...
+go to vs code
+do ctrl shift p
+and type in
+Extensions: Install from VSIX
+and then choose my vsix file
+and u got it!
